@@ -43,7 +43,7 @@ class PackageTest {
         def pName = new PackageName('a')
         def lines = [ImportLine.fromLine(1, "import b")]
         def p = new Package(pName)
-        p.addSourceFile(SourceFile.fromImports(pName, lines))
+        p.addSourceFile(SourceFile.fromImports("file", pName, lines))
         assert p.dependsOn == [new PackageName('b')] as Set
     }
 
@@ -55,7 +55,7 @@ class PackageTest {
                 ImportLine.fromLine(2, "import c")
         ]
         def p = new Package(pName)
-        p.addSourceFile(SourceFile.fromImports(pName, lines))
+        p.addSourceFile(SourceFile.fromImports("file", pName, lines))
         assert p.dependsOn*.name as Set == ['b', 'c'] as Set
     }
 
@@ -69,8 +69,8 @@ class PackageTest {
                 ImportLine.fromLine(1, "import c")
         ]
         def p = new Package(pName)
-        p.addSourceFile(SourceFile.fromImports(pName, lines1))
-        p.addSourceFile(SourceFile.fromImports(pName, lines2))
+        p.addSourceFile(SourceFile.fromImports("file1", pName, lines1))
+        p.addSourceFile(SourceFile.fromImports("file2", pName, lines2))
         assert p.dependsOn*.name as Set == ['b', 'c'] as Set
     }
 
@@ -86,8 +86,8 @@ class PackageTest {
                 ImportLine.fromLine(2, "import d")
         ]
         def p = new Package(pName)
-        p.addSourceFile(SourceFile.fromImports(pName, lines1))
-        p.addSourceFile(SourceFile.fromImports(pName, lines2))
+        p.addSourceFile(SourceFile.fromImports("file1", pName, lines1))
+        p.addSourceFile(SourceFile.fromImports("file2", pName, lines2))
         assert p.dependsOn*.name as Set == ['b', 'c', 'd'] as Set
     }
 }

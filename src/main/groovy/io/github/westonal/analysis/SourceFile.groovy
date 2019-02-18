@@ -4,16 +4,18 @@ import groovy.transform.Immutable
 
 @Immutable
 class SourceFile {
+    String fileName
     PackageName packageName
     List<ImportLine> imports
     Set<PackageName> importPackages
 
-    static SourceFile fromLines(String[] s) {
-        fromImports(findPackage(s), findImports(s))
+    static SourceFile fromLines(String fileName, String[] s) {
+        fromImports(fileName, findPackage(s), findImports(s))
     }
 
-    static SourceFile fromImports(PackageName packageName, Collection<ImportLine> imports) {
+    static SourceFile fromImports(String fileName, PackageName packageName, Collection<ImportLine> imports) {
         new SourceFile(
+                fileName: fileName,
                 packageName: packageName,
                 imports: imports,
                 importPackages: imports*.packageName as Set
