@@ -76,8 +76,9 @@ class InsightPlugin implements Plugin<Project> {
                     println 'Nothing for package insight to do, set some options:'
                     println ''
                     println 'packageInsight {\n' +
-                            '    listPackages = true\n' +
-                            '    stronglyConnectedComponentLimit = 1\n' +
+                            '    listPackages true\n' +
+                            '    stronglyConnectedComponentLimit 1\n' +
+                            '    printPackagesNotInScc true\n' +
                             '}'
                     throw new RuntimeException("Nothing for package insight to do")
                 }
