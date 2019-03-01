@@ -1,6 +1,5 @@
 package io.github.packageinsight.analysis.graphbuilding
 
-
 import org.junit.Test
 
 import static io.github.packageinsight.analysis.graphbuilding.Helpers.edge

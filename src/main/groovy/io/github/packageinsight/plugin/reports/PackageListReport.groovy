@@ -1,4 +1,4 @@
-package io.github.packageinsight.reports
+package io.github.packageinsight.plugin.reports
 
 import io.github.packageinsight.analysis.code.PackageCollection
 

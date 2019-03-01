@@ -1,4 +1,4 @@
-package io.github.packageinsight.analysis.graph
+package io.github.packageinsight.analysis.graph.scc
 
 /**
  * Based on https://www.geeksforgeeks.org/strongly-connected-components/

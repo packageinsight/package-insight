@@ -1,10 +1,10 @@
 package io.github.packageinsight.plugin
 
 import groovy.io.FileType
-import io.github.packageinsight.reports.PackageListReport
-import io.github.packageinsight.reports.StronglyConnectedComponentReport
 import io.github.packageinsight.analysis.code.PackageCollection
 import io.github.packageinsight.analysis.code.SourceFile
+import io.github.packageinsight.plugin.reports.PackageListReport
+import io.github.packageinsight.reports.StronglyConnectedComponentReport
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

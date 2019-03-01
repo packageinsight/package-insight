@@ -32,7 +32,7 @@ class GraphBuilder {
         this
     }
 
-    Graph build() {
-        new Graph(edges)
+    Graph<PackageName> build() {
+        Graph.fromEdges(edges)
     }
 }

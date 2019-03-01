@@ -1,18 +1,26 @@
 package io.github.packageinsight.analysis.graph
 
 import groovy.transform.Immutable
-import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponentDetection
-import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponent
 
 @Immutable
 class Graph<T> {
     Set<Edge<T>> edges
+    Set<T> nodes
 
-    Collection<StronglyConnectedComponent<T>> findStronglyConnectedComponents(Comparator<T> comparator) {
+    static <T> Graph<T> fromEdges(Collection<Edge<T>> edges) {
+        def setEdges = edges as Set
+        new Graph<T>(setEdges, (setEdges*.from + setEdges*.to) as Set<T>)
+    }
+
+    Collection<Graph<T>> findStronglyConnectedComponents(Comparator<T> comparator) {
         new StronglyConnectedComponentDetection<>(this, comparator).findCircular()
     }
 
-    Set<StronglyConnectedComponent<T>> findStronglyConnectedComponents() {
+    Set<Graph<T>> findStronglyConnectedComponents() {
         findStronglyConnectedComponents({ o1, o2 -> o1 <=> o2 })
+    }
+
+    int getSize() {
+        nodes.size()
     }
 }

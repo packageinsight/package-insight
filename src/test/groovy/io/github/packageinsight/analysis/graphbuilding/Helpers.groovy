@@ -6,7 +6,7 @@ import io.github.packageinsight.analysis.graph.Edge
 class Helpers {
 
     static def edge(PackageName from, PackageName to) {
-        new Edge(from, to)
+        new Edge<PackageName>(from, to)
     }
 
     static def edge(String e) {
