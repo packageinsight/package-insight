@@ -1,4 +1,4 @@
-package io.github.packageinsight.analysis
+package io.github.packageinsight.analysis.code
 
 class PackageCollection {
     final Map<PackageName, Package> packageMap = new HashMap<>()

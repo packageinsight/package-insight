@@ -1,8 +1,8 @@
 package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.packageinsight.analysis.PackageCollection
-import io.github.packageinsight.analysis.PackageName
-import io.github.packageinsight.analysis.SourceFile
+import io.github.packageinsight.analysis.code.PackageCollection
+import io.github.packageinsight.analysis.code.PackageName
+import io.github.packageinsight.analysis.code.SourceFile
 import io.github.packageinsight.analysis.graph.Edge
 import io.github.packageinsight.analysis.graph.Graph
 

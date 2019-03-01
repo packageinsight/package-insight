@@ -1,4 +1,4 @@
-package io.github.packageinsight.analysis
+package io.github.packageinsight.analysis.code
 
 class Package {
     final PackageName packageName

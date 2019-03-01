@@ -1,7 +1,7 @@
 package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.packageinsight.analysis.PackageCollection
-import io.github.packageinsight.analysis.SourceFile
+import io.github.packageinsight.analysis.code.PackageCollection
+import io.github.packageinsight.analysis.code.SourceFile
 import org.junit.Test
 
 import static io.github.packageinsight.analysis.graphbuilding.Helpers.edge

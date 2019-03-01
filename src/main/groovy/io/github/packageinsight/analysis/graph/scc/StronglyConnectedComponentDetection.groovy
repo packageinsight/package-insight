@@ -2,6 +2,7 @@ package io.github.packageinsight.analysis.graph.scc
 
 import io.github.packageinsight.analysis.graph.Graph
 import io.github.packageinsight.analysis.graph.KosarajuSccGraph
+import io.github.packageinsight.general.SetComparator
 
 class StronglyConnectedComponentDetection<T> {
     private Graph<T> graph

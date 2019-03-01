@@ -1,6 +1,6 @@
 package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.packageinsight.analysis.PackageName
+import io.github.packageinsight.analysis.code.PackageName
 import io.github.packageinsight.analysis.graph.Edge
 
 class Helpers {

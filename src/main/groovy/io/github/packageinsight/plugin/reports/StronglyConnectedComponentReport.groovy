@@ -1,7 +1,7 @@
 package io.github.packageinsight.reports
 
-import io.github.packageinsight.analysis.PackageCollection
-import io.github.packageinsight.analysis.PackageName
+import io.github.packageinsight.analysis.code.PackageCollection
+import io.github.packageinsight.analysis.code.PackageName
 import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponent
 import io.github.packageinsight.analysis.graphbuilding.GraphBuilder
 import io.github.packageinsight.analysis.graphbuilding.PackageSorting
