@@ -1,6 +1,6 @@
-package io.github.westonal.analysis.graph.scc
+package io.github.packageinsight.analysis.graph.scc
 
-import io.github.westonal.analysis.graph.KosarajuSccGraph
+import io.github.packageinsight.analysis.graph.KosarajuSccGraph
 import org.junit.Test
 
 class KosarajuSccGraphTest {

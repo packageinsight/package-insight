@@ -1,7 +1,7 @@
-package io.github.westonal.analysis.graphbuilding
+package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.westonal.analysis.PackageName
-import io.github.westonal.analysis.graph.Edge
+import io.github.packageinsight.analysis.PackageName
+import io.github.packageinsight.analysis.graph.Edge
 
 class Helpers {
 

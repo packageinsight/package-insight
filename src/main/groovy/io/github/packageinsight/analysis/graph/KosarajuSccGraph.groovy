@@ -1,4 +1,4 @@
-package io.github.westonal.analysis.graph
+package io.github.packageinsight.analysis.graph
 
 /**
  * Based on https://www.geeksforgeeks.org/strongly-connected-components/

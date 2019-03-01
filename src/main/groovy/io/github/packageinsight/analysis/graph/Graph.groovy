@@ -1,8 +1,8 @@
-package io.github.westonal.analysis.graph
+package io.github.packageinsight.analysis.graph
 
 import groovy.transform.Immutable
-import io.github.westonal.analysis.graph.scc.StronglyConnectedComponentDetection
-import io.github.westonal.analysis.graph.scc.StronglyConnectedComponent
+import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponentDetection
+import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponent
 
 @Immutable
 class Graph<T> {

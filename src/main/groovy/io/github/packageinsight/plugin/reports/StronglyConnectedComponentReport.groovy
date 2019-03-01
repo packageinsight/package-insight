@@ -1,10 +1,10 @@
 package io.github.packageinsight.reports
 
-import io.github.westonal.analysis.PackageCollection
-import io.github.westonal.analysis.PackageName
-import io.github.westonal.analysis.graph.scc.StronglyConnectedComponent
-import io.github.westonal.analysis.graphbuilding.GraphBuilder
-import io.github.westonal.analysis.graphbuilding.PackageSorting
+import io.github.packageinsight.analysis.PackageCollection
+import io.github.packageinsight.analysis.PackageName
+import io.github.packageinsight.analysis.graph.scc.StronglyConnectedComponent
+import io.github.packageinsight.analysis.graphbuilding.GraphBuilder
+import io.github.packageinsight.analysis.graphbuilding.PackageSorting
 import org.gradle.api.GradleException
 
 class StronglyConnectedComponentReport {

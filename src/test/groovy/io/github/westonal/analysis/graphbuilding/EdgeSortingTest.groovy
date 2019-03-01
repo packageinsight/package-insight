@@ -1,10 +1,10 @@
-package io.github.westonal.analysis.graphbuilding
+package io.github.packageinsight.analysis.graphbuilding
 
 
 import org.junit.Test
 
-import static io.github.westonal.analysis.graphbuilding.Helpers.edge
-import static io.github.westonal.analysis.graphbuilding.Helpers.p
+import static io.github.packageinsight.analysis.graphbuilding.Helpers.edge
+import static io.github.packageinsight.analysis.graphbuilding.Helpers.p
 
 class EdgeSortingTest {
 

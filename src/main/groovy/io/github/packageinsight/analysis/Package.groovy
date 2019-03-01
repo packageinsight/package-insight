@@ -1,4 +1,4 @@
-package io.github.westonal.analysis
+package io.github.packageinsight.analysis
 
 class Package {
     final PackageName packageName

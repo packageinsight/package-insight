@@ -1,9 +1,9 @@
-package io.github.westonal.analysis
+package io.github.packageinsight.analysis
 
 import org.junit.Test
 
 import static groovy.test.GroovyAssert.shouldFail
-import static io.github.westonal.analysis.ResourceLoader.resourceLines
+import static io.github.packageinsight.analysis.ResourceLoader.resourceLines
 
 class SourceFileTests {
 

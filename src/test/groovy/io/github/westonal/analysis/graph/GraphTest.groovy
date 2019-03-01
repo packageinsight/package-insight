@@ -1,4 +1,4 @@
-package io.github.westonal.analysis.graph
+package io.github.packageinsight.analysis.graph
 
 import org.junit.Test
 

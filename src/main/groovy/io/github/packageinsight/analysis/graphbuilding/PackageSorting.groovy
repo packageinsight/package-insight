@@ -1,6 +1,6 @@
-package io.github.westonal.analysis.graphbuilding
+package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.westonal.analysis.PackageName
+import io.github.packageinsight.analysis.PackageName
 
 class PackageSorting {
 

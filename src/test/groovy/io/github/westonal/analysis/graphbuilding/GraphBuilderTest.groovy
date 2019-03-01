@@ -1,11 +1,11 @@
-package io.github.westonal.analysis.graphbuilding
+package io.github.packageinsight.analysis.graphbuilding
 
-import io.github.westonal.analysis.PackageCollection
-import io.github.westonal.analysis.SourceFile
+import io.github.packageinsight.analysis.PackageCollection
+import io.github.packageinsight.analysis.SourceFile
 import org.junit.Test
 
-import static io.github.westonal.analysis.graphbuilding.Helpers.edge
-import static io.github.westonal.analysis.graphbuilding.Helpers.p
+import static io.github.packageinsight.analysis.graphbuilding.Helpers.edge
+import static io.github.packageinsight.analysis.graphbuilding.Helpers.p
 
 class GraphBuilderTest {
 

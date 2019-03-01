@@ -1,4 +1,4 @@
-package io.github.westonal.analysis.graph.scc
+package io.github.packageinsight.analysis.graph.scc
 
 class SetComparator<T> implements Comparator<Set<T>> {
 

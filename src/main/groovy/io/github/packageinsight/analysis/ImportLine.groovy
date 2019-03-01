@@ -1,4 +1,4 @@
-package io.github.westonal.analysis
+package io.github.packageinsight.analysis
 
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.Immutable

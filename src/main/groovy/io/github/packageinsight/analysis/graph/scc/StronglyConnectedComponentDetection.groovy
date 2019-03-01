@@ -1,7 +1,7 @@
-package io.github.westonal.analysis.graph.scc
+package io.github.packageinsight.analysis.graph.scc
 
-import io.github.westonal.analysis.graph.Graph
-import io.github.westonal.analysis.graph.KosarajuSccGraph
+import io.github.packageinsight.analysis.graph.Graph
+import io.github.packageinsight.analysis.graph.KosarajuSccGraph
 
 class StronglyConnectedComponentDetection<T> {
     private Graph<T> graph

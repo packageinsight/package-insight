@@ -1,6 +1,6 @@
 package io.github.packageinsight.reports
 
-import io.github.westonal.analysis.PackageCollection
+import io.github.packageinsight.analysis.PackageCollection
 
 class PackageListReport {
 

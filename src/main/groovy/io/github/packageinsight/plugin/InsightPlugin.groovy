@@ -3,8 +3,8 @@ package io.github.packageinsight
 import groovy.io.FileType
 import io.github.packageinsight.reports.PackageListReport
 import io.github.packageinsight.reports.StronglyConnectedComponentReport
-import io.github.westonal.analysis.PackageCollection
-import io.github.westonal.analysis.SourceFile
+import io.github.packageinsight.analysis.PackageCollection
+import io.github.packageinsight.analysis.SourceFile
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
