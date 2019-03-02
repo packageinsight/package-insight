@@ -32,6 +32,7 @@ class SourceFile {
     }
 
     private static PackageName findPackage(String[] s) {
-        new PackageName(name: ImportLine.extractFromLine(s.find { it.startsWith('package') }))
+        def line = ImportLine.extractPackageFromLine(s.find { it.startsWith('package') })
+        new PackageName(name: line)
     }
 }

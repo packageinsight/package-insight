@@ -116,4 +116,27 @@ class ImportLineTest {
                 originalImport: 'import a.package.with.top.level.function'
         ) == ImportLine.fromLine(13, 'import a.package.with.top.level.function')
     }
+
+    @Test
+    void fromKotlinTypealias() {
+        assert new ImportLine(
+                packageName: new PackageName(name: 'com.package'),
+                lineNo: 14,
+                originalImport: 'typealias BInner = com.package.B.Inner'
+        ) == ImportLine.fromLine(14, 'typealias BInner = com.package.B.Inner')
+    }
+
+    @Test
+    void nullFromKotlinTypealiasWithoutPackage() {
+        assert ImportLine.fromLine(14, 'typealias Predicate<T> = (T) -> Boolean') == null
+        assert ImportLine.fromLine(14, 'typealias Predicate = () -> Boolean') == null
+    }
+
+    @Test
+    void extractPackageFromLine() {
+        assert ImportLine.extractPackageFromLine('package com.example;') == 'com.example'
+        assert ImportLine.extractPackageFromLine('package com.example1') == 'com.example1'
+        assert ImportLine.extractPackageFromLine('package  com.example2') == 'com.example2'
+        assert ImportLine.extractPackageFromLine('  package  com.example3') == 'com.example3'
+    }
 }
