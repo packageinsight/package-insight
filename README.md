@@ -63,3 +63,11 @@ Or simply:
 ```
 ./gradlew insight
 ```
+
+### Connecting to check
+
+```
+check.dependsOn insight
+```
+
+Now the `check` task will fail if insight fails.
