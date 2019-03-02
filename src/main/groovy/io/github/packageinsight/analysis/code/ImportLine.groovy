@@ -11,36 +11,21 @@ class ImportLine {
     int lineNo
 
     static ImportLine fromLine(int lineNo, String line) {
-        def trimmed = line.trim()
-        if (!trimmed.startsWith('import ')) return null
+        def importPackage = extractFromLine(line)
+        if (importPackage == null) return null
         new ImportLine(
-                packageName: new PackageName(name: extractFromLine(trimmed)),
+                packageName: new PackageName(name: importPackage),
                 lineNo: lineNo,
                 originalImport: line
         )
     }
 
     static String extractFromLine(String s) {
-        try {
-            if (s.endsWith(';')) s = s.substring(0, s.length() - 1)
-            def split = s.split(/\s+/)
-            if (split[1] == 'static') {
-                trimLast(trimLast(split[2]))
-            } else {
-                trimLast(split[1])
-            }
+        // https://regex101.com/r/Nj45v9/2
+        def group = (s =~ /^\s*(import)\s*(static)?\s*([a-z0-9.]*)\./)
+        if (group.size() == 1) {
+            return group[0][3]
         }
-        catch (Exception e) {
-            println "Error with line: " + s
-            throw e
-        }
-    }
-
-    static String trimLast(String s) {
-        s.split(/\./).takeWhile { allLowerNonStar(it) }.join('.')
-    }
-
-    static def allLowerNonStar(String s) {
-        s != '*' && s == s.toLowerCase(Locale.US)
+        return null
     }
 }

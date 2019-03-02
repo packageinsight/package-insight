@@ -77,8 +77,8 @@ class ImportLineTest {
         assert new ImportLine(
                 packageName: new PackageName(name: 'com.example'),
                 lineNo: 15,
-                originalImport: ' import com.example.Class;'
-        ) == ImportLine.fromLine(15, ' import com.example.Class;')
+                originalImport: '  import com.example.Class;'
+        ) == ImportLine.fromLine(15, '  import com.example.Class;')
     }
 
     @Test
@@ -106,5 +106,14 @@ class ImportLineTest {
                 lineNo: 10,
                 originalImport: 'import com.example.*'
         ) == ImportLine.fromLine(10, 'import com.example.*')
+    }
+
+    @Test
+    void fromKotlinStaticTopLevelFunction() {
+        assert new ImportLine(
+                packageName: new PackageName(name: 'a.package.with.top.level'),
+                lineNo: 13,
+                originalImport: 'import a.package.with.top.level.function'
+        ) == ImportLine.fromLine(13, 'import a.package.with.top.level.function')
     }
 }
