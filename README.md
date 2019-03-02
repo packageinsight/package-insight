@@ -28,6 +28,9 @@ packageInsight {
     listPackages true
     stronglyConnectedComponentLimit 1
     printPackagesNotInScc true
+    banned = [
+        'junit.framework'
+    ]
 }
 ```
 
@@ -43,6 +46,10 @@ This identifies Circular Package References ([strongly connected components](htt
 ### printPackagesNotInScc
 
 Lists packages that were not identified in Circular Package References (Strongly Connected Components). 
+
+### banned
+
+List of banned packages. If any imports are detected, the task will fail. The task will tell you the violating import line.
 
 ## Running
 ```
