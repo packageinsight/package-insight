@@ -29,7 +29,7 @@ packageInsight {
     stronglyConnectedComponentLimit 1
     printPackagesNotInScc true
     banned = [
-        'junit.framework'
+            'junit.framework'
     ]
 }
 ```
